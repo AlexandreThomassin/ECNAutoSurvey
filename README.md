@@ -21,7 +21,7 @@ cd ECNAutoSurvey
 - Java JDk $\ge$ 11, preferably 17
 - Web server : There is a Tomcat 9 server given in this repository
 - PostgreSQL : version 15 recommended
-- IDE : The configuration below is written for NetBeans but you're free to use the one you want
+- IDE : This guide is written for NetBeans but you're free to use the one you want
 
 #### Register a Tomcat server in netbeans (taken from Jean-Yves Martin slides from PrWeb classes) :
 Open the project you just cloned with NetBeans  
