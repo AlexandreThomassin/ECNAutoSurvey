@@ -6,13 +6,13 @@
  *       the last modified time of the source file after
  *       generation to assist with modification tracking.
  */
-package org.apache.jsp.WEB_002dINF.views;
+package org.apache.jsp;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class redirect_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent,
                  org.apache.jasper.runtime.JspSourceImports {
 
@@ -113,25 +113,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("\r\n");
-      out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\r\n");
-      out.write("    \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
-      out.write("\r\n");
-      out.write("<html>\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <title>Welcome to Spring Web MVC project</title>\r\n");
-      out.write("    </head>\r\n");
-      out.write("\r\n");
-      out.write("    <body>\r\n");
-      out.write("        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>\r\n");
-      out.write("        <p><i>To display a different welcome page for this project, modify</i>\r\n");
-      out.write("            <tt>index.jsp</tt> <i>, or create your own welcome page then change\r\n");
-      out.write("                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new\r\n");
-      out.write("                welcome page and also update the welcome-file setting in</i>\r\n");
-      out.write("            <tt>web.xml</tt>.</p>\r\n");
-      out.write("    </body>\r\n");
-      out.write("</html>\r\n");
+      out.write('\n');
+      out.write('\n');
+ response.sendRedirect("index.do"); 
+      out.write('\n');
     } catch (java.lang.Throwable t) {
       if (!(t instanceof javax.servlet.jsp.SkipPageException)){
         out = _jspx_out;
