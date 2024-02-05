@@ -37,7 +37,7 @@
                                 <form>
                                     <div class="form-group">
                                       <label for="InputUser">Identifiant</label>
-                                      <input type="email" class="form-control" id="InputUser" aria-describedby="userHelp" placeholder="Identifiant">
+                                      <input type="id" class="form-control" id="InputUser" aria-describedby="userHelp" placeholder="Identifiant">
                                       <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
                                     </div>
                                     <div class="form-group">
