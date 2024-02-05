@@ -20,4 +20,9 @@ public class IndexController {
         return new ModelAndView("index");
     }
     
+    @RequestMapping(value="login.do")
+    public ModelAndView handelIndexGet() {
+        return new ModelAndView("login");
+    }
+    
 }
