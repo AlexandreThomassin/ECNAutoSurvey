@@ -21,8 +21,13 @@ public class IndexController {
     }
     
     @RequestMapping(value="login.do")
-    public ModelAndView handelIndexGet() {
+    public ModelAndView handleLoginGet() {
         return new ModelAndView("login");
+    }
+
+    @RequestMapping(value="homepage.do")
+    public ModelAndView handleHomepageGet() {
+        return new ModelAndView("homepage");
     }
     
 }

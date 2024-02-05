@@ -414,3 +414,9 @@
 05-Feb-2024 11:40:03.533 INFO [http-nio-8080-exec-1] org.apache.catalina.loader.WebappClassLoaderBase.addTransformer Ajout d'un transformateur de fichier de class [Standard ClassFileTransformer wrapping JPA transformer: org.eclipse.persistence.internal.jpa.weaving.PersistenceWeaver@41af3ee4] pour l'application web [SpringApp]
 05-Feb-2024 11:40:05.215 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\alex4\Desktop\COURS\EI3\PGROU\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml] a pris [6 205] ms
 05-Feb-2024 11:40:05.218 INFO [http-nio-8080-exec-15] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SpringApp]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+05-Feb-2024 12:06:18.396 INFO [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+05-Feb-2024 12:06:18.396 INFO [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+05-Feb-2024 12:06:19.064 INFO [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+05-Feb-2024 12:06:19.097 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc L'application web [SpringApp] a enregistré un pilote JDBC [org.postgresql.Driver], mais ne l'a pas désenregistré avant l'arrêt de l'application.  Pour éviter une fuite de mémoire, le pilote JDBC a été désenregistré de force.
+05-Feb-2024 12:06:19.109 INFO [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+05-Feb-2024 12:06:19.123 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
