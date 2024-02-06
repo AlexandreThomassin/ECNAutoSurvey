@@ -18,27 +18,70 @@
 
 
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/sidebar.css">
         <script src="https://kit.fontawesome.com/019ac265ff.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-dark">
-            <div class="container d-flex justify-content-space-between">
-                <a class="navbar-brand" href="#">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="true" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <img src="img/logo.png" height="40" alt="">
-                </a>
-            
-                <a class="navbar-brand" href="#">
-                    <i class="fa-solid fa-user fa-lg icon"></i>
-                </a>
-            </div>
+        
+
+        <nav class="navbar navbar-dark d-flex justify-content-space-between">
+            <a class="navbar-brand" href="#">
+                <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <img src="img/logo.png" height="40" alt="">
+            </a>
+        
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-user fa-lg icon"></i>
+            </a>
         </nav>
-        <div class="collapse navbar-collapse show" id="navbarToggler">
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100%;">
-                <p>Test</p>
-            </div>
-        </div>
+
+        <!-- From : https://bootsnipp.com/tags/sidebar/4#google_vignette  -->
+        <div id="wrapper" class="toggled">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
+                    <li> <a href="#">Dashboard</a> </li>
+                    <li> <a href="#">Shortcuts</a> </li>
+                    <li> <a href="#">Overview</a> </li>
+                    <li> <a href="#">Events</a> </li>
+                    <li> <a href="#">About</a> </li>
+                    <li> <a href="#">Services</a> </li>
+                    <li> <a href="#">Contact</a> </li>
+                </ul>
+            </div> <!-- /#sidebar-wrapper -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <h1>Simple Sidebar</h1>
+                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                </div>
+            </div> <!-- /#page-content-wrapper -->
+        </div> <!-- /#wrapper -->
+
+        
+
+        
     </body>
+
+    <script>
+        $(function(){
+          $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+          });
+
+          $(window).resize(function(e) {
+            if($(window).width()<=768){
+              $("#wrapper").removeClass("toggled");
+            }else{
+              $("#wrapper").addClass("toggled");
+            }
+          });
+        });
+         
+      </script>
 </html>
