@@ -1,2 +1,3 @@
 /SpringApp/target/
 SpringApp/src/main/resources/META-INF/persistence.xml
+*.log

@@ -29,20 +29,15 @@
                     </button>
                     <img src="img/logo.png" height="40" alt="">
                 </a>
-                
-                <div class="collapse navbar-collapse " id="navbarToggler">
-
-                    <h1>Test</h1>
-                </div>
+            
                 <a class="navbar-brand" href="#">
                     <i class="fa-solid fa-user fa-lg icon"></i>
                 </a>
             </div>
         </nav>
-        <div class="py-5">
-            <div class="container">
-                <h1>Hello world</h1>
-
+        <div class="collapse navbar-collapse show" id="navbarToggler">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100%;">
+                <p>Test</p>
             </div>
         </div>
     </body>
