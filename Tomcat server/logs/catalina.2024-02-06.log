@@ -1,0 +1,114 @@
+06-Feb-2024 10:38:15.369 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/9.0.85
+06-Feb-2024 10:38:15.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Jan 5 2024 08:28:07 UTC
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               9.0.85.0
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Windows 10
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       10.0
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        C:\Program Files\Java\jdk-21
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      21.0.1+12-LTS-29
+06-Feb-2024 10:38:15.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Oracle Corporation
+06-Feb-2024 10:38:15.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server
+06-Feb-2024 10:38:15.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server
+06-Feb-2024 10:38:15.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Feb-2024 10:38:15.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+06-Feb-2024 10:38:15.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+06-Feb-2024 10:38:15.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Feb-2024 10:38:15.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Feb-2024 10:38:15.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\logging.properties
+06-Feb-2024 10:38:15.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Feb-2024 10:38:15.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+06-Feb-2024 10:38:15.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+06-Feb-2024 10:38:15.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+06-Feb-2024 10:38:15.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server
+06-Feb-2024 10:38:15.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server
+06-Feb-2024 10:38:15.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\temp
+06-Feb-2024 10:38:15.386 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Chargement de la librairie Apache Tomcat Native [1.2.39] en utilisant APR version [1.7.4]
+06-Feb-2024 10:38:15.413 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Fonctionnalités d'APR : IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true]
+06-Feb-2024 10:38:15.413 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Configuration de APR/OpenSSL : useAprConnector [false], useOpenSSL [true]
+06-Feb-2024 10:38:15.419 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL a été initialisé avec succès [OpenSSL 3.0.11 19 Sep 2023]
+06-Feb-2024 10:38:15.668 INFO [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+06-Feb-2024 10:38:15.690 INFO [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [486] millisecondes
+06-Feb-2024 10:38:15.744 INFO [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+06-Feb-2024 10:38:15.744 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/9.0.85]
+06-Feb-2024 10:38:15.752 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml]
+06-Feb-2024 10:38:15.763 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/SpringApp] dans le descripteur de déploiement [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml] a été ignoré
+06-Feb-2024 10:38:15.793 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@59d4cd39]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [C:\Users\alex4\Desktop\COURS\EI3\PGROU\ECNAutoSurvey\SpringApp\target\SpringApp-1.0] n'est pas un répertoire, un fichier war, ou n'est pas lisible (il n'existe pas ou les permissions pour y accéder manquent)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+06-Feb-2024 10:38:15.829 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml] a pris [75] ms
+06-Feb-2024 10:38:15.830 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\docs]
+06-Feb-2024 10:38:16.234 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+06-Feb-2024 10:38:16.281 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\docs] de l'application web s'est terminé en [451] ms
+06-Feb-2024 10:38:16.281 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\examples]
+06-Feb-2024 10:38:16.820 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+06-Feb-2024 10:38:16.892 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\examples] de l'application web s'est terminé en [610] ms
+06-Feb-2024 10:38:16.892 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\host-manager]
+06-Feb-2024 10:38:17.063 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+06-Feb-2024 10:38:17.070 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\host-manager] de l'application web s'est terminé en [178] ms
+06-Feb-2024 10:38:17.070 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\manager]
+06-Feb-2024 10:38:17.235 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+06-Feb-2024 10:38:17.238 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\manager] de l'application web s'est terminé en [168] ms
+06-Feb-2024 10:38:17.238 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\ROOT]
+06-Feb-2024 10:38:17.379 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+06-Feb-2024 10:38:17.382 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\webapps\ROOT] de l'application web s'est terminé en [144] ms
+06-Feb-2024 10:38:17.384 INFO [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+06-Feb-2024 10:38:17.403 INFO [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [1712] millisecondes
+06-Feb-2024 10:41:25.827 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/SpringApp]
+06-Feb-2024 10:41:25.861 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml]
+06-Feb-2024 10:41:25.862 WARNING [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/SpringApp] dans le descripteur de déploiement [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml] a été ignoré
+06-Feb-2024 10:41:28.208 WARNING [http-nio-8080-exec-3] java.util.ArrayList.forEach Name = DataSource Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "20" for "maxActive" property, which is being ignored.
+06-Feb-2024 10:41:28.208 WARNING [http-nio-8080-exec-3] java.util.ArrayList.forEach Name = DataSource Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "-1" for "maxWait" property, which is being ignored.
+06-Feb-2024 10:41:28.317 INFO [http-nio-8080-exec-3] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+06-Feb-2024 10:41:30.436 INFO [http-nio-8080-exec-3] org.apache.catalina.loader.WebappClassLoaderBase.addTransformer Ajout d'un transformateur de fichier de class [Standard ClassFileTransformer wrapping JPA transformer: org.eclipse.persistence.internal.jpa.weaving.PersistenceWeaver@3b993a09] pour l'application web [SpringApp]
+06-Feb-2024 10:41:32.217 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\Alex\Documents\COURS\EI3\ECNAutoSurvey\Tomcat server\conf\Catalina\localhost\SpringApp.xml] a pris [6 356] ms
+06-Feb-2024 10:41:32.219 INFO [http-nio-8080-exec-1] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SpringApp]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+06-Feb-2024 12:07:29.098 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/SpringApp]
+06-Feb-2024 12:07:29.123 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc L'application web [SpringApp] a enregistré un pilote JDBC [org.postgresql.Driver], mais ne l'a pas désenregistré avant l'arrêt de l'application.  Pour éviter une fuite de mémoire, le pilote JDBC a été désenregistré de force.
