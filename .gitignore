@@ -1,2 +1,4 @@
 /SpringApp/target/
-"Tomcat Server"/
+/SpringApp/src/main/resources/persistence.xml
+Tomcat server/conf/Catalina/localhost/SpringApp.xml
+*.log

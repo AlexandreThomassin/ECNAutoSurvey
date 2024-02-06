@@ -21,16 +21,17 @@
         <script src="https://kit.fontawesome.com/019ac265ff.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-dark navbar-expand-md">
+        <nav class="navbar navbar-dark">
             <div class="container d-flex justify-content-space-between">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+                <a class="navbar-brand" href="#">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <img src="img/logo.png" height="40" alt="">
+                </a>
+                
                 <div class="collapse navbar-collapse " id="navbarToggler">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/logo.png" height="40" alt="">
-                    </a>
+
                     <h1>Test</h1>
                 </div>
                 <a class="navbar-brand" href="#">
