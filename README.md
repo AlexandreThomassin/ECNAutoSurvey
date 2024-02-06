@@ -47,8 +47,9 @@ You should already have PostgreSQL local server configured.
 
 Create a new user:  
 ```
-On PgAdmin right click on you server, select "Create" > "Login/Group role" and set :
+On PgAdmin right click on your server, select "Create" > "Login/Group role" and set :
 - Name: pgrou
+- Password : admin
 - Privileges : at least "Can login?"  
 ```
 

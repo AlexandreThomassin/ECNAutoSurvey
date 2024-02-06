@@ -20,4 +20,14 @@ public class IndexController {
         return new ModelAndView("index");
     }
     
+    @RequestMapping(value="login.do")
+    public ModelAndView handleLoginGet() {
+        return new ModelAndView("login");
+    }
+
+    @RequestMapping(value="homepage.do")
+    public ModelAndView handleHomepageGet() {
+        return new ModelAndView("homepage");
+    }
+    
 }

@@ -6,6 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Welcome to Spring Web MVC project</title>
+        <link rel="stylesheet" href="css/index.css" type="text/css">
     </head>
 
     <body>
@@ -15,5 +16,6 @@
                 the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
                 welcome page and also update the welcome-file setting in</i>
             <tt>web.xml</tt>.</p>
+        <p>Hiiiiiiii</p>
     </body>
 </html>
