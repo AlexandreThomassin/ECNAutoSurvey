@@ -1,4 +1,1 @@
 /SpringApp/target/
-Tomcat server/conf/Catalina/localhost/SpringApp.xml
-*.log
-SpringApp/src/main/resources/META-INF/persistence.xml
