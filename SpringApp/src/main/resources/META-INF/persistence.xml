@@ -7,7 +7,7 @@
     <class>fr.centrale.springapp.items.Borrow</class>
     <class>fr.centrale.springapp.items.Person</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/SpringApp"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/SpringApp"/>
       <property name="javax.persistence.jdbc.user" value="pgrou"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="javax.persistence.jdbc.password" value="admin"/>
