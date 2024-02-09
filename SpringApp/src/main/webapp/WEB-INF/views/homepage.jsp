@@ -42,14 +42,70 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
-                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
-                    <li> <a href="#">Dashboard</a> </li>
-                    <li> <a href="#">Shortcuts</a> </li>
-                    <li> <a href="#">Overview</a> </li>
-                    <li> <a href="#">Events</a> </li>
-                    <li> <a href="#">About</a> </li>
-                    <li> <a href="#">Services</a> </li>
-                    <li> <a href="#">Contact</a> </li>
+                    <!-- Sidebar menu -->
+                    <div id="AdministratifMenu">
+                        <li><h4 class="pt-3 text-secondary">Administratif</h5></li>
+                        <li> 
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-8"><span>Dashboard</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-8"><span>Liste des matières</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-8"><span>Liste des synthèses</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                    </div>
+                    <hr>
+                    <div id="MatièresMenu">
+                        <li><h4 class="text-secondary">Matières</h5></li>
+                        <li> 
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-8"><span>OBJET</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-8"><span>BDONN</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <div class="row">
+                                    <div class="col-8"><span>MADIS</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                    </div>
+                    
+                    
                 </ul>
             </div> <!-- /#sidebar-wrapper -->
             <!-- Page Content -->

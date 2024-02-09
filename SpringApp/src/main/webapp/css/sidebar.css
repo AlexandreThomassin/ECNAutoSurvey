@@ -54,7 +54,7 @@ list-style: none;
 
 .sidebar-nav li {
 text-indent: 20px;
-line-height: 40px;
+line-height: 30px;
 }
 
 .sidebar-nav li a {
@@ -90,10 +90,10 @@ background: none;
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 0;
+        padding-right: 0;
     }
     #wrapper.toggled {
-        padding-right: 250px;
+        padding-left: 250px;
     }
     #sidebar-wrapper {
         width: 0;
