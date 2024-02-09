@@ -50,7 +50,7 @@
                                 </form>
                                 <hr>
                                 <h5>Etudiants :</h5>
-                                <button class="btn btn-primary w-100">Accéder aux synthèses</button>
+                                <a href="homepage.do"><button class="btn btn-primary w-100">Accéder aux synthèses</button></a>
                             </div>
                         </div>
                     </div>
