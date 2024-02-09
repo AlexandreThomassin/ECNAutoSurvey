@@ -32,8 +32,10 @@
                                 <h2>Bienvenue !</h1>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center pt-2 pb-4">
+                        <div class="row d-flex justify-content-center pb-4">
                             <div class="col-md-11 mx-4">
+                                <hr>
+                                <h5>Professeurs :</h5>
                                 <form>
                                     <div class="form-group">
                                       <label for="InputUser">Identifiant</label>
@@ -44,8 +46,11 @@
                                       <label for="InputPassword">Mot de passe</label>
                                       <input type="password" class="form-control" id="InputPassword" placeholder="Mot de passe">
                                     </div>
-                                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                                    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
                                 </form>
+                                <hr>
+                                <h5>Etudiants :</h5>
+                                <button class="btn btn-primary w-100">Accéder aux synthèses</button>
                             </div>
                         </div>
                     </div>
