@@ -29,5 +29,10 @@ public class IndexController {
     public ModelAndView handleHomepageGet() {
         return new ModelAndView("homepage");
     }
+
+    @RequestMapping(value="test.do")
+    public ModelAndView handleTestGet() {
+        return new ModelAndView("sidebarv0.5");
+    }
     
 }
