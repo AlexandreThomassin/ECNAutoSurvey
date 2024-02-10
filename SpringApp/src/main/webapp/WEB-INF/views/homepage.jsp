@@ -19,7 +19,7 @@
 
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/sidebar.css">
-        <script src="https://kit.fontawesome.com/019ac265ff.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="fontawesome/css/all.css">
     </head>
     <body>
         
@@ -44,7 +44,7 @@
                 <ul class="sidebar-nav">
                     <!-- Sidebar menu -->
                     <div id="AdministratifMenu">
-                        <li><h4 class="pt-3 text-secondary">Administratif</h5></li>
+                        <li><h5 class="pt-3 text-secondary">Administratif</h5></li>
                         <li> 
                             <a href="#">
                                 <div class="row">
@@ -75,11 +75,11 @@
                     </div>
                     <hr>
                     <div id="MatièresMenu">
-                        <li><h4 class="text-secondary">Matières</h5></li>
+                        <li><h5 class="text-secondary">Options disciplinaires</h5></li>
                         <li> 
                             <a href="#">
                                 <div class="row">
-                                    <div class="col-8"><span>OBJET</span></div>
+                                    <div class="col-8"><span>INFO-SI</span></div>
                                     <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
                                     
                                 </div>
@@ -88,18 +88,8 @@
                         <li> 
                             <a href="#">
                                 <div class="row">
-                                    <div class="col-8"><span>BDONN</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>MADIS</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                    
+                                    <div class="col-8"><span>INFO-IA</span></div>
+                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>  
                                 </div>
                             </a>
                         </li>
