@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
  * @author Alex
  */
 @Repository
-public class BorrowRepositoryCustomImpl implements BorrowRepositoryCustom {
+public class SubjectRepositoryCustomImpl implements SubjectRepositoryCustom {
     
 }
+

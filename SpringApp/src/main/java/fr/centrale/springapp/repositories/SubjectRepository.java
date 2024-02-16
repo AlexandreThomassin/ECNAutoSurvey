@@ -4,10 +4,15 @@
  */
 package fr.centrale.springapp.repositories;
 
+import fr.centrale.springapp.items.Subject;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Alex
  */
-public interface PersonRepositoryCustom {
+@Repository
+public interface SubjectRepository extends JpaRepository<Subject, Integer>, SubjectRepositoryCustom {
     
 }

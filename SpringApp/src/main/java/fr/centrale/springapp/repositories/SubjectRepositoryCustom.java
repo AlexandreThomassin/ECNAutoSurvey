@@ -8,6 +8,6 @@ package fr.centrale.springapp.repositories;
  *
  * @author Alex
  */
-public interface BorrowRepositoryCustom {
+public interface SubjectRepositoryCustom {
     
 }

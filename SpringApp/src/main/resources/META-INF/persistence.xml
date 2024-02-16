@@ -3,14 +3,15 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="fr.centrale.springapp_1.0PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>fr.centrale.springapp.items.Book</class>
-    <class>fr.centrale.springapp.items.Borrow</class>
-    <class>fr.centrale.springapp.items.Person</class>
+    <class>fr.centrale.springapp.items.SubjectGroup</class>
+    <class>fr.centrale.springapp.items.InterfaceUser</class>
+    <class>fr.centrale.springapp.items.Subject</class>
+    <class>fr.centrale.springapp.items.Survey</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/SpringApp"/>
-      <property name="javax.persistence.jdbc.user" value="pgrou"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://appli-pfe.ec-nantes.fr:5432/auto-survey"/>
+      <property name="javax.persistence.jdbc.user" value="auto-survey"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="admin"/>
+      <property name="javax.persistence.jdbc.password" value="NFOSI-Survey2024"/>
     </properties>
   </persistence-unit>
   <properties/>
