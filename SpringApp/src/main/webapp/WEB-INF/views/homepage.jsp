@@ -5,6 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="scheme" value="${pageContext.request.scheme}"/>
+<c:set var="baseURL" value="${pageContext.request.localName}"/>
+<c:set var="serverPort" value="${pageContext.request.serverPort}"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +31,7 @@
         
 
         <nav class="navbar navbar-dark d-flex justify-content-space-between">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/homepage.do">
                 <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation" data-toggle-sidebar="MainSidebar">
                     <span class="navbar-toggler-icon text-white"></span>
                 </button>
@@ -40,105 +44,8 @@
         </nav>
 
         <div id="page" class="active">
-            <div id="MainSidebar" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="false">
-                <div class="sidebar__content">
-                    <div id="AdministratifMenu">
-                        <li><h5 class="pt-3 text-secondary">Administratif</h5></li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>Dashboard</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>Liste des matières</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-    
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>Liste des synthèses</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                    </div>
-                    <hr>
-                    <div id="MatièresMenu">
-                        <li><h5 class="text-secondary">Options disciplinaires</h5></li>
-                        <li> 
-                            <a href="#" data-toggle-sidebar="INFO-SI">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <span>Cliquez ici !!!!!</span>
-                                    </div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>INFO-IA</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>  
-                                </div>
-                            </a>
-                        </li>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sub Sidebar : Shown when we select a menu in the main sidebar -->
-            <div id="INFO-SI" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="true">
-                <div class="sidebar__content">
-                    <div id="AdministratifMenu">
-                        <li>
-                            <a href="#" data-toggle-sidebar="INFO-SI">
-                                <div class="row pt-3">
-                                    <div class="col-2"><span class="fa fa-chevron-left arrow text-secondary"></span></div>
-                                    <div class="col-10"><h5 class="text-secondary arrow">INFO-SI - Matières</h5></div>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>PRWEB</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>DEVMO</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-    
-                                </div>
-                            </a>
-                        </li>
-                        <li> 
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-8"><span>TLANG</span></div>
-                                    <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                    </div>
-                </div>
+            <div id="Sidebar">
+
             </div>
             
             <!-- Page content : YOU MUST PUT THE CONTENT OF THE PAGE HERE -->
@@ -159,80 +66,15 @@
     </body>
 
     <script>
-        function toggleAllSidebar(){
-            document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
-                const sidebarID = toggle.dataset.toggleSidebar;
-                // check if there is an element on the doc with the id
-                const sidebarElement = sidebarID ? document.getElementById(sidebarID) : undefined;
-                // if there is a sidebar with the passed id (data-toggle-sidebar)
-                if (sidebarElement) {
-                    // toggle the aria-hidden state of the given sidebar
-                    let sidebarState = sidebarElement.getAttribute('aria-hidden');
-                    sidebarElement.setAttribute('aria-hidden', true); 
-                }
-            });
-        }
-
-        // Catch all the `[data-toggle-sidebar]` elements on the document.
-        document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
-            // Add an event listener on those elements "click" event
-            toggle.addEventListener('click', e => {
-            // get the sidebar ID from the current element data attribute
-            const sidebarID = toggle.dataset.toggleSidebar;
-            // check if there is an element on the doc with the id
-            const sidebarElement = sidebarID ? document.getElementById(sidebarID) : undefined;
-            // if there is a sidebar with the passed id (data-toggle-sidebar)
-            if (sidebarElement) {
-                // toggle the aria-hidden state of the given sidebar
-                let sidebarState = sidebarElement.getAttribute('aria-hidden');
-                sidebarElement.setAttribute('aria-hidden', sidebarState == 'true' ? false : true); 
-
-                // If we toggle MainSidebar we want all sidebar to close
-                if (sidebarID == "MainSidebar"){
-                    if (sidebarState == 'false'){
-                        toggleAllSidebar();
-                    }
-                
-                    $("#page").toggleClass("active")
-                }
-            }
-            });
-        });
-         
-        $(function(){
-
-          $(window).resize(function(e) {
-            if($(window).width()<=768){
-                document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
-                    // get the sidebar ID from the current element data attribute
-                    const sidebarID = toggle.dataset.toggleSidebar;
-                    // check if there is an element on the doc with the id
-                    const sidebarElement = sidebarID ? document.getElementById(sidebarID) : undefined;
-                    
-                    // toggle the aria-hidden state of the given sidebar
-                    let sidebarState = sidebarElement.getAttribute('aria-hidden');
-                    sidebarElement.setAttribute('aria-hidden', true); 
-                    
-                });
-                $("#page").removeClass("active");
-                
-            }else{
-                document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
-                    // get the sidebar ID from the current element data attribute
-                    const sidebarID = toggle.dataset.toggleSidebar;
-
-                    if (sidebarID == "MainSidebar"){
-                        // check if there is an element on the doc with the id
-                        const sidebarElement = sidebarID ? document.getElementById(sidebarID) : undefined;
-                        
-                        // toggle the aria-hidden state of the given sidebar
-                        let sidebarState = sidebarElement.getAttribute('aria-hidden');
-                        sidebarElement.setAttribute('aria-hidden', false); 
-                    }
-                });
-                $("#page").addClass("active");
-            }
-          });
-        });
+        // Load the sidebar : DO NOT TOUCH
+        $.ajax({
+            'url': '${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/sidebar.do',
+            'type': 'get',
+            'dataType': 'html'
+        })
+        .done(function (response) {
+            $('#Sidebar').append(response);
+        })
       </script>
+        
 </html>

@@ -35,4 +35,10 @@ public class IndexController {
         return new ModelAndView("sidebarv0.5");
     }
     
+    @RequestMapping(value="sidebar.do")
+    public ModelAndView handleGetNavbar() {
+        System.out.println("Navbar");
+        return new ModelAndView("sidebar");
+    }
+    
 }

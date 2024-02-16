@@ -45,8 +45,6 @@ public class SubjectsController {
         JSONArray returnJSON = new JSONArray(subjectList);
         
         returned.addObject("list", returnJSON);
-        
-
         return returned;
     }
 
