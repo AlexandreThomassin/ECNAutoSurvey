@@ -7,11 +7,12 @@ body {
     background-color: #fab600;
     height: 100vh;
     position: fixed;
-    left: -250px;
-    width: 250px;
+    left: -251px;
     padding: 0;
 
-    overflow-y: auto;
+    min-width: 250px;
+
+    list-style: none;
     
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
