@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Test page</title>
+        <title>Accueil</title>
 
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -26,12 +26,14 @@
         <link rel="stylesheet" href="fontawesome/css/all.css">
 
         <script src="js/test.js"></script>
+
+        <link rel="shortcut icon" href="favicon.ico">
     </head>
     <body>
         
 
         <nav class="navbar navbar-dark d-flex justify-content-space-between">
-            <a class="navbar-brand" href="${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/homepage.do">
+            <a class="navbar-brand" href="/SpringApp/homepage.do">
                 <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation" data-toggle-sidebar="MainSidebar">
                     <span class="navbar-toggler-icon text-white"></span>
                 </button>
@@ -68,7 +70,7 @@
     <script>
         // Load the sidebar : DO NOT TOUCH
         $.ajax({
-            'url': '${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/sidebar.do',
+            'url': '/SpringApp/sidebar.do',
             'type': 'get',
             'dataType': 'html'
         })

@@ -36,7 +36,9 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "SubjectGroup.findByGroupName", query = "SELECT s FROM SubjectGroup s WHERE s.groupName = :groupName"),
     @NamedQuery(name = "SubjectGroup.findByGroupNbStudents", query = "SELECT s FROM SubjectGroup s WHERE s.groupNbStudents = :groupNbStudents"),
     @NamedQuery(name = "SubjectGroup.findByGroupTeacherMail", query = "SELECT s FROM SubjectGroup s WHERE s.groupTeacherMail = :groupTeacherMail"),
-    @NamedQuery(name = "SubjectGroup.findByGroupStudentMail", query = "SELECT s FROM SubjectGroup s WHERE s.groupStudentMail = :groupStudentMail")})
+    @NamedQuery(name = "SubjectGroup.findByGroupStudentMail", query = "SELECT s FROM SubjectGroup s WHERE s.groupStudentMail = :groupStudentMail"),
+    
+})
 public class SubjectGroup implements Serializable {
 
     private static final long serialVersionUID = 1L;

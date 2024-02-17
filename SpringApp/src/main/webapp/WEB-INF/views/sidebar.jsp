@@ -3,7 +3,7 @@
     Created on : 16 févr. 2024, 15:39:35
     Author     : Alex
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="MainSidebar" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="false">
     <div class="sidebar__content">
@@ -12,17 +12,15 @@
             <li> 
                 <a href="#">
                     <div class="row">
-                        <div class="col-8"><span>Dashboard</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                        <div class="col-12"><span>Dashboard</span></div>
                         
                     </div>
                 </a>
             </li>
             <li> 
-                <a href="${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/admin/subjects.do">
+                <a href="/SpringApp/admin/subjects.do">
                     <div class="row">
-                        <div class="col-8"><span>Liste des matières</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                        <div class="col-12"><span>Liste des matières</span></div>
 
                     </div>
                 </a>
@@ -30,8 +28,7 @@
             <li> 
                 <a href="#">
                     <div class="row">
-                        <div class="col-8"><span>Liste des synthèses</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
+                        <div class="col-12"><span>Liste des synthèses</span></div>
                         
                     </div>
                 </a>
@@ -39,72 +36,49 @@
         </div>
         <hr>
         <div id="MatièresMenu">
-            <li><h5 class="text-secondary">Options disciplinaires</h5></li>
-            <li> 
-                <a href="#" data-toggle-sidebar="INFO-SI">
-                    <div class="row">
-                        <div class="col-8">
-                            <span>Cliquez ici !!!!!</span>
+            <li><h5 class="text-secondary">Syntèses</h5></li>
+            <c:forEach var="type" items="${types}">
+                <li> 
+                    <a href="#" data-toggle-sidebar="${type}">
+                        <div class="row">
+                            <div class="col-8"><span>${type}</span></div>
+                            <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
                         </div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                    </div>
-                </a>
-            </li>
-            <li> 
-                <a href="#">
-                    <div class="row">
-                        <div class="col-8"><span>INFO-IA</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>  
-                    </div>
-                </a>
-            </li>
+                    </a>
+                </li>
+            </c:forEach>
+            
         </div>
     </div>
 </div>
 
-<!-- Sub Sidebar : Shown when we select a menu in the main sidebar -->
-<div id="INFO-SI" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="true">
-    <div class="sidebar__content">
-        <div id="AdministratifMenu">
-            <li>
-                <a href="#" data-toggle-sidebar="INFO-SI">
-                    <div class="row pt-3">
-                        <div class="col-2"><span class="fa fa-chevron-left arrow text-secondary"></span></div>
-                        <div class="col-10"><h5 class="text-secondary arrow">INFO-SI - Matières</h5></div>
-                        
-                    </div>
-                </a>
-            </li>
-            <li> 
-                <a href="#">
-                    <div class="row">
-                        <div class="col-8"><span>PRWEB</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                        
-                    </div>
-                </a>
-            </li>
-            <li> 
-                <a href="#">
-                    <div class="row">
-                        <div class="col-8"><span>DEVMO</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-
-                    </div>
-                </a>
-            </li>
-            <li> 
-                <a href="#">
-                    <div class="row">
-                        <div class="col-8"><span>TLANG</span></div>
-                        <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
-                        
-                    </div>
-                </a>
-            </li>
+<c:forEach var="type" items="${types}">
+    <!-- Sub Sidebar : Shown when we select a menu in the main sidebar -->
+    <div id="${type}" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="true">
+        <div class="sidebar__content">
+            <div id="AdministratifMenu">
+                <li>
+                    <a href="#" data-toggle-sidebar="${type}">
+                        <div class="row pt-3">
+                            <div class="col-2"><span class="fa fa-chevron-left arrow text-secondary"></span></div>
+                            <div class="col-10"><h5 class="text-secondary arrow">${type}</h5></div>
+                            
+                        </div>
+                    </a>
+                </li>
+                <c:forEach var="group" items="${groupsByTypes[type]}">
+                    <li> 
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-12"><span>${group}</span></div>
+                            </div>
+                        </a>
+                    </li>
+                </c:forEach>
+            </div>
         </div>
     </div>
-</div>
+</c:forEach>
 
 <script>
 

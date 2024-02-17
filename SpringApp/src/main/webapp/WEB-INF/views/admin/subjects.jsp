@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Test page</title>
+        <title>Matières</title>
 
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
         <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
@@ -32,7 +32,7 @@
         
 
         <nav class="navbar navbar-dark d-flex justify-content-space-between sticky-top">
-            <a class="navbar-brand" href="${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/homepage.do">
+            <a class="navbar-brand" href="/SpringApp/homepage.do">
                 <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation" data-toggle-sidebar="MainSidebar">
                     <span class="navbar-toggler-icon text-white"></span>
                 </button>
@@ -50,6 +50,14 @@
                     DO NOT CHANGE DIV ID
                     The content of the sidebar will be loaded here
                     See navbar.jsp to modify the sidebar -->
+                    <div id="sidebar_loader" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="false">
+                        <div class="sidebar__content">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                
             </div>
             
             
@@ -75,7 +83,7 @@
                             <tr>
                                 <th data-field="idSubject" data-visible="false">ID</th>
                                 <th data-field="subjectAcronym">Acronyme</th>
-                                <th data-field="subjectName">Nom</th>
+                                <th data-field="subjectName" data-sortable="true">Nom</th>
                                 <th data-field="subjectCode">Code</th>
                             </tr>
                         </thead>
@@ -93,9 +101,15 @@
 
       <script>
         $.ajax({
-            'url': '${pageContext.request.scheme}://${pageContext.request.localName}:${pageContext.request.serverPort}/SpringApp/sidebar.do',
+            'url': '/SpringApp/sidebar.do',
             'type': 'get',
-            'dataType': 'html'
+            'dataType': 'html',
+            beforeSend: function() {
+               $("#sidebar_loader").show();
+            },
+            success: function(msg) {
+              $("#sidebar_loader").hide();
+            }
         })
         .done(function (response) {
             $('#Sidebar').append(response);
