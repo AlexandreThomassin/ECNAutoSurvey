@@ -7,11 +7,12 @@ body {
     background-color: #fab600;
     height: 100vh;
     position: fixed;
-    left: -250px;
-    width: 250px;
+    left: -276px;
     padding: 0;
 
-    overflow-y: auto;
+    min-width: 275px;
+
+    list-style: none;
     
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -111,13 +112,17 @@ h5 {
     margin-right: 0px;  
 }
 
+#sidebar_loader{
+    display:none;
+}
+
 
 @media(min-width:768px) {
     #page {
         padding-right: 0;
     }
     #page.active {
-        padding-left: 250px;
+        padding-left: 275px;
     }
 
     .page-content {
