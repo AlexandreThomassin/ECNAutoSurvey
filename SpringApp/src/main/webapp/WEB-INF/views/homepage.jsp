@@ -15,39 +15,45 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Accueil</title>
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+        <!-- Bootstrap Table -->
+        <link rel="stylesheet" href="../bootstrap-table/dist/bootstrap-table.min.css">
+        <link rel="stylesheet" href="../bootstrap-icons/font/bootstrap-icons.css">
 
 
+        <link rel="stylesheet" href="../css/main.css">
+        <!-- Mandatory to use the sidebar -->
+        <link rel="stylesheet" href="../css/sidebar.css">
+        <link rel="stylesheet" href="../fontawesome/css/all.css">
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/sidebar.css">
-        <link rel="stylesheet" href="fontawesome/css/all.css">
+        <script src="../js/test.js"></script>
 
-        <script src="js/test.js"></script>
+        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
 
         <link rel="shortcut icon" href="favicon.ico">
     </head>
     <body>
         
 
-        <nav class="navbar navbar-dark d-flex justify-content-space-between">
-            <a class="navbar-brand" href="/SpringApp/homepage.do">
-                <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation" data-toggle-sidebar="MainSidebar">
-                    <span class="navbar-toggler-icon text-white"></span>
-                </button>
-                <img src="img/logo.png" height="40" alt="">
-            </a>
-        
-            <a class="navbar-brand" href="#">
-                <i class="fa fa-user icon"></i>
-            </a>
-        </nav>
+        <%@ include file="navbar.jspf" %>
 
         <div id="page" class="active">
             <div id="Sidebar">
-
+                <!-- 
+                    DO NOT CHANGE DIV ID
+                    The content of the sidebar will be loaded here
+                    See navbar.jsp to modify the sidebar -->
+                    <div id="sidebar_loader" class="sidebar pt-5 d-flex justify-content-center" aria-label="Main sidebar containing navigation links and some information" aria-hidden="false">
+                        <div class="sidebar__content">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                
             </div>
             
             <!-- Page content : YOU MUST PUT THE CONTENT OF THE PAGE HERE -->
@@ -77,6 +83,8 @@
         .done(function (response) {
             $('#Sidebar').append(response);
         })
-      </script>
+    </script>
+
+
         
 </html>

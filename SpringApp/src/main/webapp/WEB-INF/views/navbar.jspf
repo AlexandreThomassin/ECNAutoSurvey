@@ -1,0 +1,16 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<nav class="navbar navbar-dark d-flex justify-content-space-between sticky-top">
+    <div class="navbar-brand">
+        <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation" data-toggle-sidebar="MainSidebar">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <a href="/SpringApp/homepage.do">
+            <img src="/SpringApp/img/logo.png" height="40" alt="">
+        </a>
+    </div>
+
+    <a class="navbar-brand" href="/SpringApp/login.do">
+        <i class="fa fa-user icon"></i>
+    </a>
+</nav>

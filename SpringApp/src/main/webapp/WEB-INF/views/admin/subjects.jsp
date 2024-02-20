@@ -12,9 +12,10 @@
         <title>Matières</title>
 
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Table -->
+        <link rel="stylesheet" href="../bootstrap-table/dist/bootstrap-table.min.css">
+        <link rel="stylesheet" href="../bootstrap-icons/font/bootstrap-icons.css">
+
 
         <link rel="stylesheet" href="../css/main.css">
         <!-- Mandatory to use the sidebar -->
@@ -23,26 +24,15 @@
 
         <script src="../js/test.js"></script>
 
-        <!-- Bootstrap Table -->
-        <link rel="stylesheet" href="../bootstrap-table/dist/bootstrap-table.min.css">
-        
+        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+
     </head>
     <body>
         
-        
-
-        <nav class="navbar navbar-dark d-flex justify-content-space-between sticky-top">
-            <a class="navbar-brand" href="/SpringApp/homepage.do">
-                <button id="menu-toggle" class="navbar-toggler mr-3 text-white" type="button" aria-label="Toggle navigation" data-toggle-sidebar="MainSidebar">
-                    <span class="navbar-toggler-icon text-white"></span>
-                </button>
-                <img src="../img/logo.png" height="40" alt="">
-            </a>
-        
-            <a class="navbar-brand" href="#">
-                <i class="fa fa-user icon"></i>
-            </a>
-        </nav>
+        <%@ include file="../navbar.jspf" %>
 
         <div id="page" class="active">
             <div id="Sidebar">
@@ -50,7 +40,7 @@
                     DO NOT CHANGE DIV ID
                     The content of the sidebar will be loaded here
                     See navbar.jsp to modify the sidebar -->
-                    <div id="sidebar_loader" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="false">
+                    <div id="sidebar_loader" class="sidebar pt-5 d-flex justify-content-center" aria-label="Main sidebar containing navigation links and some information" aria-hidden="false">
                         <div class="sidebar__content">
                             <div class="spinner-border" role="status">
                                 <span class="sr-only">Loading...</span>
@@ -70,14 +60,18 @@
                     </div>
                     
                     <table
+                        id="table"
                         data-toggle="table"
                         data-url="../json/jsonSubjects.do"
                         data-toolbar="#toolbar"
                         data-pagination="true"
-                        data-page-size="25"
+                        data-page-size="10"
                         data-show-refresh="true"
                         data-show-columns="true"
-                        data-height="800"
+                        data-search="true"
+                        data-show-export="true"
+                        data-export-data-type="all"
+                        data-buttons-order="['refresh', 'toggle', 'fullscreen', 'export']"
                         >
                         <thead>
                             <tr>
@@ -85,6 +79,7 @@
                                 <th data-field="subjectAcronym">Acronyme</th>
                                 <th data-field="subjectName" data-sortable="true">Nom</th>
                                 <th data-field="subjectCode">Code</th>
+                                <th data-field="actions" data-formatter="actionFormatter" data-align="center">Actions</th>
                             </tr>
                         </thead>
                     </table>
@@ -95,25 +90,35 @@
         
 
         
-
+    
     <script type="module" src="../bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="module" src="../bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    
     </body>
 
-      <script>
-        $.ajax({
-            'url': '/SpringApp/sidebar.do',
-            'type': 'get',
-            'dataType': 'html',
-            beforeSend: function() {
-               $("#sidebar_loader").show();
-            },
-            success: function(msg) {
-              $("#sidebar_loader").hide();
+        <script>
+            function actionFormatter(value, row) {
+                return '<div> <button class="btn btn-primary"> <i class="fa fa-solid fa-pen"></i> </button> <button class="btn btn-danger"> <i class="fa fa-solid fa-trash"></i> </button> </div'
             }
-        })
-        .done(function (response) {
-            $('#Sidebar').append(response);
-        })
-      </script>
+        </script>
+
+        <script>
+            $.ajax({
+                'url': '/SpringApp/sidebar.do',
+                'type': 'get',
+                'dataType': 'html',
+                beforeSend: function() {
+                $("#sidebar_loader").show();
+                $("#sidebar_loader").attr('aria-hidden', false);
+                },
+                success: function(msg) {
+                $("#sidebar_loader").hide();
+                $("#sidebar_loader").attr('aria-hidden', true);
+                }
+            })
+            .done(function (response) {
+                $('#Sidebar').append(response);
+            })
+        </script>
 
 </html>

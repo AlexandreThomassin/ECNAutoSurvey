@@ -4,10 +4,14 @@
  */
 package fr.centrale.springapp.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.centrale.springapp.items.Subject;
 import fr.centrale.springapp.repositories.SubjectRepository;
+import java.util.Collection;
 import java.util.List;
 import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -30,16 +34,17 @@ public class SubjectsController {
         return new ModelAndView("admin/subjects");
     }
     
-    @RequestMapping(value="json/jsonSubjects.do", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ModelAndView getSubjects () {
+    @RequestMapping(value="json/jsonSubjects.do")
+    public ModelAndView getSubjects () throws JsonProcessingException {
         ModelAndView returned = new ModelAndView("json/jsonSubjects");
 
         
-        List<Subject> subjectList = subjectRepository.findAll();
+        Collection<Subject> subjectList = subjectRepository.findAll();
         System.out.println(subjectList);
         
+        ObjectMapper objectMapper = new ObjectMapper();
         
-        JSONArray returnJSON = new JSONArray(subjectList);
+        String returnJSON = objectMapper.writeValueAsString(subjectList);
         
         returned.addObject("list", returnJSON);
         return returned;

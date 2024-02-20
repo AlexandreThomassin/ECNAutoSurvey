@@ -4,6 +4,7 @@
  */
 package fr.centrale.springapp.items;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
@@ -23,10 +24,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import org.json.JSONPropertyIgnore;
 
 /**
  *
- * @author Alex
+ * @author alex4
  */
 @Entity
 @Table(name = "subject")
@@ -36,9 +38,10 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Subject.findBySubjectCode", query = "SELECT s FROM Subject s WHERE s.subjectCode = :subjectCode"),
     @NamedQuery(name = "Subject.findBySubjectAcronym", query = "SELECT s FROM Subject s WHERE s.subjectAcronym = :subjectAcronym"),
     @NamedQuery(name = "Subject.findBySubjectName", query = "SELECT s FROM Subject s WHERE s.subjectName = :subjectName"),
+    @NamedQuery(name = "Subject.findBySubjectNbStudents", query = "SELECT s FROM Subject s WHERE s.subjectNbStudents = :subjectNbStudents"),
     @NamedQuery(name = "Subject.findByHasProject", query = "SELECT s FROM Subject s WHERE s.hasProject = :hasProject"),
     @NamedQuery(name = "Subject.findBySubjectSemester", query = "SELECT s FROM Subject s WHERE s.subjectSemester = :subjectSemester"),
-    @NamedQuery(name = "Subject.findBySubjectYear", query = "SELECT s FROM Subject s WHERE s.subjectYear = :subjectYear"),
+    @NamedQuery(name = "Subject.findBySubjectCreationYear", query = "SELECT s FROM Subject s WHERE s.subjectCreationYear = :subjectCreationYear"),
     @NamedQuery(name = "Subject.findBySubjectStudentMail", query = "SELECT s FROM Subject s WHERE s.subjectStudentMail = :subjectStudentMail"),
     @NamedQuery(name = "Subject.findBySubjectTeacherMail", query = "SELECT s FROM Subject s WHERE s.subjectTeacherMail = :subjectTeacherMail"),
     @NamedQuery(name = "Subject.findByLastSurveyDate", query = "SELECT s FROM Subject s WHERE s.lastSurveyDate = :lastSurveyDate"),
@@ -63,12 +66,14 @@ public class Subject implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "subject_name")
     private String subjectName;
+    @Column(name = "subject_nb_students")
+    private Integer subjectNbStudents;
     @Column(name = "has_project")
     private Boolean hasProject;
     @Column(name = "subject_semester")
     private Integer subjectSemester;
-    @Column(name = "subject_year")
-    private Integer subjectYear;
+    @Column(name = "subject_creation_year")
+    private Integer subjectCreationYear;
     @Size(max = 2147483647)
     @Column(name = "subject_student_mail")
     private String subjectStudentMail;
@@ -85,11 +90,14 @@ public class Subject implements Serializable {
     @NotNull
     @Column(name = "to_renew")
     private boolean toRenew;
+    @JsonIgnore
     @ManyToMany(mappedBy = "subjectCollection")
     private Collection<SubjectGroup> subjectGroupCollection;
+    
     @JoinTable(name = "user_linked_to_subject", joinColumns = {
         @JoinColumn(name = "id_subject", referencedColumnName = "id_subject")}, inverseJoinColumns = {
         @JoinColumn(name = "id_user", referencedColumnName = "id_user")})
+    @JsonIgnore
     @ManyToMany
     private Collection<InterfaceUser> interfaceUserCollection;
 
@@ -138,6 +146,14 @@ public class Subject implements Serializable {
         this.subjectName = subjectName;
     }
 
+    public Integer getSubjectNbStudents() {
+        return subjectNbStudents;
+    }
+
+    public void setSubjectNbStudents(Integer subjectNbStudents) {
+        this.subjectNbStudents = subjectNbStudents;
+    }
+
     public Boolean getHasProject() {
         return hasProject;
     }
@@ -154,12 +170,12 @@ public class Subject implements Serializable {
         this.subjectSemester = subjectSemester;
     }
 
-    public Integer getSubjectYear() {
-        return subjectYear;
+    public Integer getSubjectCreationYear() {
+        return subjectCreationYear;
     }
 
-    public void setSubjectYear(Integer subjectYear) {
-        this.subjectYear = subjectYear;
+    public void setSubjectCreationYear(Integer subjectCreationYear) {
+        this.subjectCreationYear = subjectCreationYear;
     }
 
     public String getSubjectStudentMail() {

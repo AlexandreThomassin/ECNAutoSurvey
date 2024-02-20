@@ -22,5 +22,7 @@ public interface SubjectGroupRepository extends JpaRepository<SubjectGroup, Inte
     @Query("select g.groupName from SubjectGroup g where g.groupType like ?1")
     List<String> findAllByGroupType(String type);
     
+    @Query("select g from SubjectGroup g where g.groupName like ?1")
+    SubjectGroup findByGroupName(String group);
    
 }

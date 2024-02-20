@@ -21,7 +21,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author Alex
+ * @author alex4
  */
 @Entity
 @Table(name = "interface_user")

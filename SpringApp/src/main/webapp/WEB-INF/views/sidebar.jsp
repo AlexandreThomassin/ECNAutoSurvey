@@ -68,7 +68,7 @@
                 </li>
                 <c:forEach var="group" items="${groupsByTypes[type]}">
                     <li> 
-                        <a href="#">
+                        <a href="/SpringApp/synthesis.do?group=${group}">
                             <div class="row">
                                 <div class="col-12"><span>${group}</span></div>
                             </div>
@@ -93,6 +93,7 @@
                 let sidebarState = sidebarElement.getAttribute('aria-hidden');
                 sidebarElement.setAttribute('aria-hidden', true); 
             }
+            
         });
     }
 

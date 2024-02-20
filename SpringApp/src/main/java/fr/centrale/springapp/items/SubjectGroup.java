@@ -25,7 +25,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author Alex
+ * @author alex4
  */
 @Entity
 @Table(name = "subject_group")
@@ -34,11 +34,8 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "SubjectGroup.findByIdGroup", query = "SELECT s FROM SubjectGroup s WHERE s.idGroup = :idGroup"),
     @NamedQuery(name = "SubjectGroup.findByGroupType", query = "SELECT s FROM SubjectGroup s WHERE s.groupType = :groupType"),
     @NamedQuery(name = "SubjectGroup.findByGroupName", query = "SELECT s FROM SubjectGroup s WHERE s.groupName = :groupName"),
-    @NamedQuery(name = "SubjectGroup.findByGroupNbStudents", query = "SELECT s FROM SubjectGroup s WHERE s.groupNbStudents = :groupNbStudents"),
     @NamedQuery(name = "SubjectGroup.findByGroupTeacherMail", query = "SELECT s FROM SubjectGroup s WHERE s.groupTeacherMail = :groupTeacherMail"),
-    @NamedQuery(name = "SubjectGroup.findByGroupStudentMail", query = "SELECT s FROM SubjectGroup s WHERE s.groupStudentMail = :groupStudentMail"),
-    
-})
+    @NamedQuery(name = "SubjectGroup.findByGroupStudentMail", query = "SELECT s FROM SubjectGroup s WHERE s.groupStudentMail = :groupStudentMail")})
 public class SubjectGroup implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -55,8 +52,6 @@ public class SubjectGroup implements Serializable {
     @Size(min = 1, max = 2147483647)
     @Column(name = "group_name")
     private String groupName;
-    @Column(name = "group_nb_students")
-    private Integer groupNbStudents;
     @Size(max = 2147483647)
     @Column(name = "group_teacher_mail")
     private String groupTeacherMail;
@@ -105,14 +100,6 @@ public class SubjectGroup implements Serializable {
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
-    }
-
-    public Integer getGroupNbStudents() {
-        return groupNbStudents;
-    }
-
-    public void setGroupNbStudents(Integer groupNbStudents) {
-        this.groupNbStudents = groupNbStudents;
     }
 
     public String getGroupTeacherMail() {
