@@ -82,8 +82,8 @@
                                 <th data-field="subjectAcronym">Acronyme</th>
                                 <th data-field="subjectName" data-sortable="true">Nom</th>
                                 <th data-field="subjectCode">Code</th>
-                                <th data-field="subjectGroupCollection">Option</th>
-                                <th data-field="actions" data-formatter="actionFormatter" data-align="center">Actions</th>
+                                <th data-field="subjectGroupCollection" data-sortable="true">Option</th>
+                                <th data-field="actions" data-formatter="actionFormatter" data-align="center" data-width="130">Actions</th>
                             </tr>
                         </thead>
                     </table>
