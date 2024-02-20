@@ -67,6 +67,7 @@
                         id="table"
                         data-toggle="table"
                         data-url="/SpringApp/json/jsonSynthesis.do?group=${group}"
+                        data-locale="fr-FR"
                         data-toolbar="#toolbar"
                         data-pagination="true"
                         data-page-size="10"
@@ -97,6 +98,7 @@
         
 
         <script type="module" src="/SpringApp/bootstrap-table/dist/bootstrap-table.min.js"></script>
+        <script type="module" src="/SpringApp/bootstrap-table/dist/bootstrap-table-locale-all.min.js"></script>
         <script type="module" src="/SpringApp/bootstrap-table/dist/extensions/export/bootstrap-table-export.min.js"></script>
     </body>
 
