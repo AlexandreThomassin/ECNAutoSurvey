@@ -39,7 +39,7 @@
             <li><h5 class="text-secondary">Syntèses</h5></li>
             <c:forEach var="type" items="${types}">
                 <li> 
-                    <a href="#" data-toggle-sidebar="${type}">
+                    <a href="#" data-toggle-sidebar="${type}" onclick="return false;">
                         <div class="row">
                             <div class="col-8"><span>${type}</span></div>
                             <div class="col-4"><span class="fa fa-chevron-right mr-3"></span></div>
@@ -58,7 +58,7 @@
         <div class="sidebar__content">
             <div id="AdministratifMenu">
                 <li>
-                    <a href="#" data-toggle-sidebar="${type}">
+                    <a href="#" data-toggle-sidebar="${type}" onclick="return false;">
                         <div class="row pt-3">
                             <div class="col-2"><span class="fa fa-chevron-left arrow text-secondary"></span></div>
                             <div class="col-10"><h5 class="text-secondary arrow">${type}</h5></div>

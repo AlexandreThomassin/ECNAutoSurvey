@@ -29,6 +29,8 @@
         <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
 
+        <link rel="shortcut icon" href="../favicon.ico">
+
     </head>
     <body>
         
@@ -56,7 +58,7 @@
                 <div class="container-fluid">
                     
                     <div id="toolbar">
-                        <h2>Liste des matières</h2>
+                        <h2>Liste des matières <button class="btn btn-info mb-1"> <i class="fa fa-solid fa-plus pr-2"></i> Ajouter une matière</button> </h2>
                     </div>
                     
                     <table
@@ -80,6 +82,7 @@
                                 <th data-field="subjectAcronym">Acronyme</th>
                                 <th data-field="subjectName" data-sortable="true">Nom</th>
                                 <th data-field="subjectCode">Code</th>
+                                <th data-field="subjectGroupCollection">Option</th>
                                 <th data-field="actions" data-formatter="actionFormatter" data-align="center">Actions</th>
                             </tr>
                         </thead>

@@ -5,6 +5,8 @@
 package fr.centrale.springapp.items;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import fr.centrale.springapp.converter.SubjectGroupListConverter;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
@@ -90,7 +92,7 @@ public class Subject implements Serializable {
     @NotNull
     @Column(name = "to_renew")
     private boolean toRenew;
-    @JsonIgnore
+    @JsonSerialize(converter = SubjectGroupListConverter.class)
     @ManyToMany(mappedBy = "subjectCollection")
     private Collection<SubjectGroup> subjectGroupCollection;
     
