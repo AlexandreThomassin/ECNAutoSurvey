@@ -58,7 +58,7 @@
                 <div class="container-fluid">
                     
                     <div id="toolbar">
-                        <h2>Liste des matières <button class="btn btn-info mb-1"> <i class="fa fa-solid fa-plus pr-2"></i> Ajouter une matière</button> </h2>
+                        <h2>Liste des matières <button class="btn btn-info mb-1 ml-1"> <i class="fas fa-plus-circle pr-2"></i> Ajouter une matière</button> </h2>
                     </div>
                     
                     <table
@@ -81,8 +81,9 @@
                                 <th data-field="idSubject" data-visible="false">ID</th>
                                 <th data-field="subjectAcronym">Acronyme</th>
                                 <th data-field="subjectName" data-sortable="true">Nom</th>
-                                <th data-field="subjectCode">Code</th>
+                                <th data-field="subjectCode" data-visible="false">Code</th>
                                 <th data-field="subjectGroupCollection" data-sortable="true">Option</th>
+                                <th data-field="hasProject" data-sortable="true">Projet</th>
                                 <th data-field="actions" data-formatter="actionFormatter" data-align="center" data-width="130">Actions</th>
                             </tr>
                         </thead>
@@ -103,8 +104,9 @@
 
         <script>
             function actionFormatter(value, row) {
-                return '<div> <button class="btn btn-primary"> <i class="fa fa-solid fa-pen"></i> </button> <button class="btn btn-danger"> <i class="fa fa-solid fa-trash"></i> </button> </div'
+                return '<div> <a href="/SpringApp/admin/modifySubject.do?id=' + row.idSubject + '"> <button class="btn btn-primary"> <i class="fas fa-pen"></i> </button> </a> <button class="btn btn-danger"> <i class="fas fa-trash"></i> </button> </div'
             }
+
         </script>
 
         <script>

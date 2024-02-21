@@ -59,9 +59,8 @@
             <!-- Page content : YOU MUST PUT THE CONTENT OF THE PAGE HERE -->
             <div class="page-content">
                 <div class="container-fluid">
-                    <h1>Page Template</h1>
-                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                    <p>Make sure to keep all page content within the <code>#page-content</code>.</p>
+                    <h1>Hello World !</h1>
+                    
                 </div>
             </div>
             <!-- End Page content -->
