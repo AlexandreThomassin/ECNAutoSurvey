@@ -13,6 +13,8 @@ import java.util.stream.Collectors;
  *
  * @author alex4
  */
+
+// Converter used to convert a SubjectGroup collection to string without instanciating each subjects in a SubjectGroup (It caused overflow error)
 public class SubjectGroupListConverter extends StdConverter<Collection<SubjectGroup>, Collection<String>> {
     @Override
     public Collection<String> convert(Collection<SubjectGroup> subjectGroup) {

@@ -36,7 +36,7 @@
         </div>
         <hr>
         <div id="MatièresMenu">
-            <li><h5 class="text-secondary">Syntèses</h5></li>
+            <li><h5 class="text-secondary">Synthèses</h5></li>
             <c:forEach var="type" items="${types}">
                 <li> 
                     <a href="#" data-toggle-sidebar="${type}" onclick="return false;">
@@ -122,6 +122,22 @@
         }
         });
     });
+
+    if($(window).width()<=768){
+            document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
+                // get the sidebar ID from the current element data attribute
+                const sidebarID = toggle.dataset.toggleSidebar;
+                // check if there is an element on the doc with the id
+                const sidebarElement = sidebarID ? document.getElementById(sidebarID) : undefined;
+                
+                // toggle the aria-hidden state of the given sidebar
+                let sidebarState = sidebarElement.getAttribute('aria-hidden');
+                sidebarElement.setAttribute('aria-hidden', true); 
+                
+            });
+            $("#page").removeClass("active");
+            
+        }
      
     $(function(){
 

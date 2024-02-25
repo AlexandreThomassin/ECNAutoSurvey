@@ -24,7 +24,9 @@
         <link rel="stylesheet" href="/SpringApp/css/main.css">
         <!-- Mandatory to use the sidebar -->
         <link rel="stylesheet" href="/SpringApp/css/sidebar.css">
-        <link rel="stylesheet" href="/SpringApp/fontawesome/css/all.css">
+        <link rel="stylesheet" href="/SpringApp/fontawesome/css/all.min.css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
 
         <script src="/SpringApp/js/test.js"></script>
 
@@ -32,6 +34,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script type="text/javascript" src="/SpringApp/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 
         <link rel="shortcut icon" href="../favicon.ico">
     </head>
@@ -72,51 +76,51 @@
                             <form action="/SpringApp/admin/modifySubject.do" method="post">
         
                                 <div class="form-group row">
-                                    <label for="staticID" class="col-lg-3 col-form-label">ID</label>
+                                    <label for="idSubject" class="col-lg-3 col-form-label">ID</label>
                                     <div class="col-lg-9">
-                                        <input type="text" readonly class="form-control" id="staticID" value="${subject.idSubject}">
+                                        <input name="idSubject" type="text" readonly class="form-control" id="idSubject" value="${subject.idSubject}">
                                     </div>
                                 </div>
         
                                 <div class="form-group row">
                                     <label for="subjectName" class="col-lg-3 col-form-label">Nom</label>
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="subjectName" value="${subject.subjectName}">
+                                        <input name="subjectName" type="text" class="form-control" id="subjectName" value="${subject.subjectName}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="subjectAcronym" class="col-lg-3 col-form-label">Acronyme</label>
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="subjectAcronym" value="${subject.subjectAcronym}">
+                                        <input name="subjectAcronym" type="text" class="form-control" id="subjectAcronym" value="${subject.subjectAcronym}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="subjectCode" class="col-lg-3 col-form-label">Code</label>
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="subjectCode" value="${subject.subjectCode}">
+                                        <input name="subjectCode" type="text" class="form-control" id="subjectCode" value="${subject.subjectCode}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="subjectNbStudents" class="col-lg-3 col-form-label">Nombre d'étudiant</label>
                                     <div class="col-lg-9">
-                                        <input type="number" class="form-control" id="subjectNbStudents" value="${subject.subjectNbStudents}">
+                                        <input name="subjectNbStudents" type="number" class="form-control" id="subjectNbStudents" value="${subject.subjectNbStudents}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="subjectSemester" class="col-lg-3 col-form-label">Semestre concerné</label>
                                     <div class="col-lg-9">
-                                        <input type="number" class="form-control" id="subjectSemester" value="${subject.subjectSemester}">
+                                        <input name="subjectSemester" type="number" class="form-control" id="subjectSemester" value="${subject.subjectSemester}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="hasProject" class="col-lg-3 col-form-label">Possède un projet</label>
                                     <div class="col-lg-9">
-                                        <select class="custom-select">
+                                        <select name="hasProject" class="custom-select">
                                             <c:choose>
                                                 <c:when test = "${subject.hasProject}">
                                                     <option value="false">Non</option>
@@ -132,6 +136,32 @@
                                             </select>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <label for="subjectGroup" class="col-lg-3 col-form-label">Option</label>
+                                    <div class="col-lg-9">
+                                        <select name="subjectGroup" class="js-select2" class="custom-select" multiple>
+                                            <c:forEach var="group" items="${subjectGroups}">
+                                                <c:choose>
+                                                    <c:when test = "${not empty map[group.idGroup]}">
+                                                        <option value="${group.idGroup}" data-badge="" selected>
+                                                            ${group.groupName}
+                                                        </option>
+                                                    </c:when>
+
+                                                    <c:otherwise>
+                                                        <option value="${group.idGroup}" data-badge="">
+                                                            ${group.groupName}
+                                                        </option>
+                                                    </c:otherwise>
+                                                </c:choose>
+
+                                                
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <br>
                                 <button type="submit" class="btn btn-info"> <i class="fas fa-save pr-1"></i> Enregistrer</button>
                             </form>
@@ -145,7 +175,7 @@
         
 
         
-
+        <script type="text/javascript" src="../js/multiple-select.js"></script>
         
     </body>
 

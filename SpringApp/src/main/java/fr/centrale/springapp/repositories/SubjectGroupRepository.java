@@ -5,6 +5,7 @@
 package fr.centrale.springapp.repositories;
 
 import fr.centrale.springapp.items.SubjectGroup;
+import java.util.Collection;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -24,5 +25,8 @@ public interface SubjectGroupRepository extends JpaRepository<SubjectGroup, Inte
     
     @Query("select g from SubjectGroup g where g.groupName like ?1")
     SubjectGroup findByGroupName(String group);
+    
+    @Query("select g from SubjectGroup g where g.idGroup in ?1")
+    Collection<SubjectGroup> findByGroupIdIn(Collection<Integer> subjectGroupsIds);
    
 }

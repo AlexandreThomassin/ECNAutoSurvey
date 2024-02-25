@@ -58,10 +58,7 @@ public class SubjectGroup implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "group_student_mail")
     private String groupStudentMail;
-    @JoinTable(name = "group_contains_subject", joinColumns = {
-        @JoinColumn(name = "id_group", referencedColumnName = "id_group")}, inverseJoinColumns = {
-        @JoinColumn(name = "id_subject", referencedColumnName = "id_subject")})
-    @ManyToMany
+    @ManyToMany(mappedBy = "subjectGroupCollection")
     private Collection<Subject> subjectCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idGroup")
     private Collection<Survey> surveyCollection;

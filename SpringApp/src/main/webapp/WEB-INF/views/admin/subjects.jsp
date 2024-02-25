@@ -25,8 +25,7 @@
         <script src="../js/test.js"></script>
 
         <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
 
         <link rel="shortcut icon" href="../favicon.ico">
@@ -103,8 +102,18 @@
     </body>
 
         <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+
             function actionFormatter(value, row) {
-                return '<div> <a href="/SpringApp/admin/modifySubject.do?id=' + row.idSubject + '"> <button class="btn btn-primary"> <i class="fas fa-pen"></i> </button> </a> <button class="btn btn-danger"> <i class="fas fa-trash"></i> </button> </div'
+                return '<div> <a class = "text-decoration-none" href="/SpringApp/admin/modifySubject.do?id=' + row.idSubject + '"> <button class="btn btn-primary" data-toggle="tooltip" title="Modifier"> <i class="fas fa-pen"></i> </button> </a> <button class="btn btn-danger" data-toggle="tooltip" title="Supprimer"> <i class="fas fa-trash"></i> </button> </div'
+            }
+
+            function cellNameStyleFormatter(){
+                return {
+                    classes: "text-truncate"
+                }
             }
 
         </script>

@@ -92,8 +92,11 @@ public class Subject implements Serializable {
     @NotNull
     @Column(name = "to_renew")
     private boolean toRenew;
+    @JoinTable(name = "group_contains_subject", joinColumns = {
+    @JoinColumn(name = "id_subject", referencedColumnName = "id_subject")}, inverseJoinColumns = {
+    @JoinColumn(name = "id_group", referencedColumnName = "id_group")})
     @JsonSerialize(converter = SubjectGroupListConverter.class)
-    @ManyToMany(mappedBy = "subjectCollection")
+    @ManyToMany
     private Collection<SubjectGroup> subjectGroupCollection;
     
     @JoinTable(name = "user_linked_to_subject", joinColumns = {
@@ -258,7 +261,7 @@ public class Subject implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.centrale.springapp.items.Subject[ idSubject=" + idSubject + " ]";
+        return "fr.centrale.springapp.items.Subject[ idSubject=" + idSubject + ", subjectName=" + subjectName + " ]";
     }
     
 }

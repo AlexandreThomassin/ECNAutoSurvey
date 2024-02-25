@@ -106,6 +106,12 @@
         function actionFormatter(value, row) {
             return '<div> </button> <button class="btn btn-info"> <i class="fa fa-solid fa-eye"></i> </button> </div'
         }
+
+        function cellNameStyleFormatter(){
+            return {
+                classes: 'custom-cell-name'
+            }
+        }
     </script>
 
     <script>

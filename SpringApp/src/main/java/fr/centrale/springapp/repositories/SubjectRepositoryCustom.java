@@ -4,10 +4,12 @@
  */
 package fr.centrale.springapp.repositories;
 
+import fr.centrale.springapp.items.Subject;
+
 /**
  *
  * @author Alex
  */
 public interface SubjectRepositoryCustom {
-    
+    public Subject update(int id, Subject subject);
 }

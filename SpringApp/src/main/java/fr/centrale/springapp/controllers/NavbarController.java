@@ -38,9 +38,7 @@ public class NavbarController {
         ModelAndView sidebar = new ModelAndView("sidebar");
         
         List<String> groupTypes = subjectGroupRepository.getGroupTypes();
-        
-        System.out.println(groupTypes);
-        
+
         sidebar.addObject("types", groupTypes);
         
         HashMap<String, List<String>> groupsByTypes = new HashMap<>();
@@ -49,8 +47,6 @@ public class NavbarController {
             groupsByTypes.put(type, subjectGroupRepository.findAllByGroupType(type));
         }
         
-        System.out.println(groupsByTypes);
-        
         sidebar.addObject("groupsByTypes", groupsByTypes);
                 
         return sidebar;
@@ -58,7 +54,6 @@ public class NavbarController {
     
     @RequestMapping(value="synthesis.do")
     public ModelAndView handleSynthesis(@RequestParam String group) {
-        System.out.println("Test " + group);
         ModelAndView returned = new ModelAndView("synthesis");
         returned.addObject("group", group);
         
@@ -72,7 +67,6 @@ public class NavbarController {
         SubjectGroup subjectGroup = subjectGroupRepository.findByGroupName(group);
         
         Collection<Subject> subjectList = subjectGroup.getSubjectCollection();
-        System.out.println(subjectList);
         
         ObjectMapper objectMapper = new ObjectMapper();
         
