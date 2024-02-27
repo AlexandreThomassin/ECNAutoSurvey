@@ -10,10 +10,9 @@
         <div id="AdministratifMenu">
             <li><h5 class="pt-3 text-secondary">Administratif</h5></li>
             <li> 
-                <a href="#">
+                <a href="dashboard.do">
                     <div class="row">
                         <div class="col-12"><span>Dashboard</span></div>
-                        
                     </div>
                 </a>
             </li>

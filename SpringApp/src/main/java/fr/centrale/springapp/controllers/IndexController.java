@@ -29,6 +29,11 @@ public class IndexController {
     public ModelAndView handleHomepageGet() {
         return new ModelAndView("homepage");
     }
+    
+    @RequestMapping(value="dashboard.do")
+    public ModelAndView handleDashboardGet() {
+        return new ModelAndView("admin/dashboard");
+    }
 
     @RequestMapping(value="test.do")
     public ModelAndView handleTestGet() {

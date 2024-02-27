@@ -34,7 +34,7 @@
     <body>
         
 
-        <%@ include file="navbar.jspf" %>
+        <%@ include file="../navbar.jspf" %>
 
         <div id="page" class="active">
             <div id="Sidebar">
@@ -72,20 +72,13 @@
                             <div class="col-md-11 mx-4">
                                 <hr>
                                 <h5>Ajoutez des synthèses en sélectionnant le dossier contenant les fichiers .json</h5>
-                                <form method="POST" enctype="multipart/form-data" action="/">
-                                <table>
-                                        <tr><td>Fichier à télécharger:</td><td><input type="file" name="file" /></td></tr>
-                                        <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
-                                </table>
+                                <form method="POST" action="uploadMultipleFile" enctype="multipart/form-data">
+                                    Fichier 1 <input type="file" name="file"><br /> 
+                                    Nom du fichier 1 : <input type="text" name="name"><br /> <br /> 
+                                    Fichier 2 <input type="file" name="file"><br /> 
+                                    Nom du fichier 2 : <input type="text" name="name"><br /> <br />
+                                    <input type="submit" value="Upload">
                                 </form>
-                            </div>
-
-                            <div>
-                                <ul>
-                                        <li th:each="file : ${files}">
-                                                <a th:href="${file}" th:text="${file}" />
-                                        </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
