@@ -52,45 +52,75 @@
                 
             </div>
             
-        <div class="py-5">
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-md-12  d-flex justify-content-center">
-                    <img src="img/logo.png" alt="" class="logo">
-                </div>
-
-            </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="box pt-2 mw-100 mx-4">
-
-                        <div class="row d-flex justify-content-center pt-2">
-                            <div class="col-md-12">
-                                <h2>Bienvenue dans votre dashboard !</h1>
+            <!-- Page content : YOU MUST PUT THE CONTENT OF THE PAGE HERE -->
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 pt-3">
+                            <div class="row ">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <img src="img/logo.png" alt="" class="logo" width="200px">
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row d-flex justify-content-center pt-2 text-center">
+                                <div class="col-xl-7">
+                                    <h2>Bienvenue dans votre dashboard !</h2>
+                                    <hr>
+                                </div>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center pb-4">
-                            <div class="col-md-11 mx-4">
-                                <hr>
-                                <h5>Ajoutez des synthèses en sélectionnant le dossier contenant les fichiers .json</h5>
-                                <form method="POST" action="uploadMultipleFile" enctype="multipart/form-data">
-                                    Fichier 1 <input type="file" name="file"><br /> 
-                                    Nom du fichier 1 : <input type="text" name="name"><br /> <br /> 
-                                    Fichier 2 <input type="file" name="file"><br /> 
-                                    Nom du fichier 2 : <input type="text" name="name"><br /> <br />
-                                    <input type="submit" value="Upload">
-                                </form>
+
+                    </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-xl-5 pt-3">
+                                <div class="box pt-2 mx-4">
+                                    <div class="row d-flex justify-content-center pb-4 mx-2">
+                                        <div class="col-lg-12">
+                                            
+                                            <h4>Import des fichiers .json</h4>
+                                            <form method="POST" action="uploadMultipleFiles.do" enctype="multipart/form-data">
+                                                <div class="form-group pt-2">
+                                                    <!-- <label for="exampleInputEmail1">Fichiers à ajouter</label> -->
+                                                    <input type="file" class="form-control" id="file_upload" name="file" multiple aria-describedby="uploadHelp">
+                                                    <small id="uploadHelp" class="form-text text-muted">Sélectionnez tous les fichiers .json que vous voulez importer</small>
+                                                </div>
+    
+                                                <button type="submit" class="btn btn-primary w-100">Upload</button>
+    
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                            <div class="col-xl-5 pt-3">
+                                <div class="box pt-2 mx-4">
+                                    <div class="row d-flex justify-content-center pb-4 mx-2">
+                                        <div class="col-lg-12">
+                                            
+                                            <h4>Génération des synthèses</h4>
+                                            <div class="alert alert-warning" role="alert">
+                                                Il faut importer les fichiers json avant de générer les synthèses !
+                                            </div>
+                                            <form method="POST" action="generateSynthesis.do">
+                                                <button type="submit" class="btn btn-primary w-100">Générer</button>
+                                            </form>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
         
 
-        
-
-        
     </body>
 
     <script>
