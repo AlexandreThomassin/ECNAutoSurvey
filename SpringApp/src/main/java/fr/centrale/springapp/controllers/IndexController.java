@@ -30,7 +30,7 @@ public class IndexController {
         return new ModelAndView("homepage");
     }
     
-    @RequestMapping(value="dashboard.do")
+    @RequestMapping(value="admin/dashboard.do")
     public ModelAndView handleDashboardGet() {
         return new ModelAndView("admin/dashboard");
     }
@@ -40,5 +40,9 @@ public class IndexController {
         return new ModelAndView("sidebarv0.5");
     }
    
+    @RequestMapping(value="surveySynthesis.do")
+    public ModelAndView handleSurveySynthesisGet() {
+        return new ModelAndView("surveySynthesis");
+    }
     
 }

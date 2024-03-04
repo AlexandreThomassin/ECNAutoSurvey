@@ -114,4 +114,8 @@ margin-right: 0 !important;}
     box-shadow: 1px 1px 1px 1px gray;
 }
 
+h5 small {
+    font-size: small;
+}
+
 
