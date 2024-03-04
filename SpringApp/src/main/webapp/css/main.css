@@ -106,4 +106,12 @@ margin-right: 0 !important;}
     border-color: #ced4da !important;
 }
 
+.box {
+
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
 

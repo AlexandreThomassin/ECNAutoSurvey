@@ -37,6 +37,7 @@ public class FileUploadController {
             if (!file.isEmpty()) {
                     try {
                             byte[] bytes = file.getBytes();
+                            
 
                             // Creating the directory to store file
                             String rootPath = System.getProperty("catalina.home");
@@ -70,16 +71,17 @@ public class FileUploadController {
      */
     @RequestMapping(value = "uploadMultipleFiles.do", method = RequestMethod.POST)
     public @ResponseBody
-    String uploadMultipleFileHandler(@RequestParam("name") String[] names,
+    String uploadMultipleFileHandler(
         @RequestParam("file") MultipartFile[] files) {
-
-        if (files.length != names.length)
-            return "Mandatory information missing";
 
         String message = "";
         for (int i = 0; i < files.length; i++) {
             MultipartFile file = files[i];
-            String name = names[i];
+
+            String name = file.getOriginalFilename();
+            
+            System.out.println(file.getOriginalFilename());
+            
             try {
                 byte[] bytes = file.getBytes();
 
@@ -96,7 +98,8 @@ public class FileUploadController {
                                 new FileOutputStream(serverFile));
                 stream.write(bytes);
                 stream.close();
-
+                
+                logger.info("test");
                 logger.info("Server File Location="
                                 + serverFile.getAbsolutePath());
 
