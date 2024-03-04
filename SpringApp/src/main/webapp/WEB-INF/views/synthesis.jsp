@@ -104,7 +104,7 @@
 
     <script>
         function actionFormatter(value, row) {
-            return '<div> </button> <button class="btn btn-info"> <i class="fa fa-solid fa-eye"></i> </button> </div'
+            return '<div> <a class = "text-decoration-none" href="/SpringApp/surveySynthesis.do"> <button class="btn btn-info"> <i class="fa fa-solid fa-eye"></i> </button> </a> </div'
         }
 
         function cellNameStyleFormatter(){
