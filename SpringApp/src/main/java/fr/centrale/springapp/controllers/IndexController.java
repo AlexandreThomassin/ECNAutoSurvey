@@ -45,4 +45,18 @@ public class IndexController {
         return new ModelAndView("surveySynthesis");
     }
     
+    @RequestMapping(value="testmail.do")
+    public ModelAndView handletestmailGet() {
+        return new ModelAndView("testmail");
+    }
+    
+    @RequestMapping(value="successmail.do")
+    public ModelAndView handlesuccessmailGet() {
+        return new ModelAndView("successmail");
+    }
+    
+        @RequestMapping(value="failmail.do")
+    public ModelAndView handlefailmailGet() {
+        return new ModelAndView("failmail");
+    }
 }

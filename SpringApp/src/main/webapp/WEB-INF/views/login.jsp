@@ -51,6 +51,8 @@
                                 <hr>
                                 <h5>Etudiants :</h5>
                                 <a href="homepage.do"><button class="btn btn-primary w-100">Accéder aux synthèses</button></a>
+                                <h5>Test mail :</h5>
+                                <a href="testmail.do"><button class="btn btn-primary w-100">Accéder aux mails</button></a>
                             </div>
                         </div>
                     </div>
