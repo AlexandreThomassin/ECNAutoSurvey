@@ -47,11 +47,11 @@ public class EmailController {
             // Envoyer le message
             Transport.send(message);
 
-            return "successmail"; // Vue de succès
+            return "successmail"; // Si ca marche -> Vue de succès
 
         } catch (MessagingException e) {
             e.printStackTrace();
-            return "failmail"; // Vue d'échec
+            return "failmail"; // Si ca échoue -> Vue d'échec
         }
     }
 }
