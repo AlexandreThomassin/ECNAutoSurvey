@@ -37,16 +37,16 @@ public class DashboardController {
     @RequestMapping(value="generateSynthesis.do")
     public boolean handleSynthesisGeneration() {
         
-//        ModelAndView dashboard = new ModelAndView("admin/dashboard");
-//        
-//        PythonInterpreter pyInterp = new PythonInterpreter();
-//        StringWriter output=new StringWriter();
-//        pyInterp.setOut(output);
-//        
-//        String filename;
-//        filename=""
-//        pyInterp.execFile(filename);
-//        output.toString().trim();
+        ModelAndView dashboard = new ModelAndView("admin/dashboard");
+        
+        PythonInterpreter pyInterp = new PythonInterpreter();
+        StringWriter output=new StringWriter();
+        pyInterp.setOut(output);
+        
+        String filename;
+        filename="python_code/main.py";
+        pyInterp.execfile(filename);
+        output.toString().trim();
         
         return true;
     }
