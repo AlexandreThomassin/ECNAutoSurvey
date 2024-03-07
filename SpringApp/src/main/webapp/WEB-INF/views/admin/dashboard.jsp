@@ -106,15 +106,59 @@
                                             <div class="alert alert-warning" role="alert">
                                                 Il faut importer les fichiers json avant de générer les synthèses !
                                             </div>
-                                            <form method="POST" action="generateSynthesis.do">
-                                                <button type="submit" class="btn btn-primary w-100">Générer</button>
-                                            </form>
-                                            
+                                            <button type="button" class="btn btn-primary w-100" onclick="generateSynthesis()">Générer</button>
+                                            <div id="synthesis_loader" class="py-3" hidden>
+                                                <div class="spinner-border text-secondary" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 
                             </div>
+
+                            <div class="col-xl-10 pt-3">
+                                <div class="box pt-2 mx-4">
+                                    <div class="row d-flex justify-content-center pb-4 mx-2">
+                                        <div class="col-lg-12">
+                                            
+                                            <h4>Envois des mails</h4>
+                                            <div class="alert alert-warning" role="alert">
+                                                Il faut importer les fichiers json et générer les synthèses avant d'envoyer les mails !
+                                            </div>
+                                            <form>
+                                                <div class="form-group row">
+                                                    <label for="destinataire" class="col-lg-4 col-form-label">Adresse e-mail du destinataire:</label>
+                                                    <div class="col-lg-8">
+                                                        <input type="email" id="destinataire" name="destinataire" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group row">
+                                                    <label for="username" class="col-lg-4 col-form-label">Adresse e-mail :</label>
+                                                    <div class="col-lg-8">
+                                                        <input type="email" id="username" name="username" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="password" class="col-lg-4 col-form-label">Mot de passe :</label>
+                                                    <div class="col-lg-8">
+                                                        <input type="password" id="password" name="password" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <button type="button" class="btn btn-primary w-100" onclick="sendMails()">Envoyer les mails</button>
+                                            <div id="mails_loader" class="py-3" hidden>
+                                                <div class="spinner-border text-secondary" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -124,17 +168,54 @@
     </body>
 
     <script>
+        function generateSynthesis() {
+            console.log("test");
+            $.ajax({
+                'url': '/SpringApp/admin/generateSynthesis.do',
+                'type': 'post',
+                'datatype': 'html',
+                beforeSend: function() {
+                    $("#synthesis_loader").show();
+                },
+                success: function(msg) {
+                    $("#sidebar_loader").hide();
+                }
+            })
+            .done(function (response) {
+                console.log(response);
+            })
+            return true
+        }
+
+        function sendMails() {
+            console.log("test");
+            $.ajax({
+                'url': '/SpringApp/admin/sendMails.do',
+                'type': 'post',
+                'datatype': 'html',
+                beforeSend: function() {
+                    $("#mails_loader").show();
+                },
+                success: function(msg) {
+                    $("#mails_loader").hide();
+                }
+            })
+            return true
+        }
+    </script>
+
+    <script>
         $.ajax({
             'url': '/SpringApp/sidebar.do',
             'type': 'get',
             'dataType': 'html',
             beforeSend: function() {
-            $("#sidebar_loader").show();
-            $("#sidebar_loader").attr('aria-hidden', false);
+                $("#sidebar_loader").show();
+                $("#sidebar_loader").attr('aria-hidden', false);
             },
             success: function(msg) {
-            $("#sidebar_loader").hide();
-            $("#sidebar_loader").attr('aria-hidden', true);
+                $("#sidebar_loader").hide();
+                $("#sidebar_loader").attr('aria-hidden', true);
             }
         })
         .done(function (response) {

@@ -78,12 +78,12 @@
             'type': 'get',
             'dataType': 'html',
             beforeSend: function() {
-            $("#sidebar_loader").show();
-            $("#sidebar_loader").attr('aria-hidden', false);
+                $("#sidebar_loader").show();
+                $("#sidebar_loader").attr('aria-hidden', false);
             },
             success: function(msg) {
-            $("#sidebar_loader").hide();
-            $("#sidebar_loader").attr('aria-hidden', true);
+                $("#sidebar_loader").hide();
+                $("#sidebar_loader").attr('aria-hidden', true);
             }
         })
         .done(function (response) {
