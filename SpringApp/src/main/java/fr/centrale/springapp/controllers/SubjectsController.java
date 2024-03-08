@@ -144,11 +144,31 @@ public class SubjectsController {
         subject.setSubjectGroupCollection(subjectGroups);
         
         
-        subjectRepository.update(id, subject);
+        if(id > 0){
+            subjectRepository.update(id, subject);
+        } else {
+            subjectRepository.create(subject);
+        }
         
         
         return new RedirectView("../admin/subjects.do");
         
+    }
+    
+    @RequestMapping(value="admin/addSubject.do", method=RequestMethod.GET)
+    public ModelAndView handleGetAddSubject(){
+        ModelAndView returned = new ModelAndView("admin/modifySubject");
+        
+        Subject subject = new Subject();
+        returned.addObject("subject", subject);
+        
+        // Get list of subject groups to fill select
+        Collection<SubjectGroup> subjectGroups = subjectGroupRepository.findAll();
+
+        returned.addObject("subjectGroups", subjectGroups);
+ 
+        
+        return returned;
     }
 
 }

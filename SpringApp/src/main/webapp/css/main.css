@@ -80,9 +80,8 @@ margin-bottom: 10px;
     transition: none; } }
 
 .select2-container--open .select2-dropdown--below {
-padding: 10px 0;
+/* padding: 10px 0; */
 border-radius: 4px;
-border: none;
 }
 
 .select2-selection .select2-selection--multiple:after {
@@ -104,6 +103,10 @@ margin-right: 0 !important;}
 
 .select2-container--default .select2-selection--multiple {
     border-color: #ced4da !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+    border-top: 1px solid #aaa !important;
 }
 
 .box {

@@ -5,6 +5,8 @@
 package fr.centrale.springapp.repositories;
 
 import fr.centrale.springapp.items.Subject;
+import fr.centrale.springapp.items.SubjectGroup;
+import java.util.Collection;
 
 /**
  *
@@ -12,4 +14,5 @@ import fr.centrale.springapp.items.Subject;
  */
 public interface SubjectRepositoryCustom {
     public Subject update(int id, Subject subject);
+        public Subject create(Subject subject);
 }

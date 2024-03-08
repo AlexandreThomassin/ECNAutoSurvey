@@ -76,10 +76,20 @@
                             <form action="/SpringApp/admin/modifySubject.do" method="post">
         
                                 <div class="form-group row">
-                                    <label for="idSubject" class="col-lg-3 col-form-label">ID</label>
-                                    <div class="col-lg-9">
-                                        <input name="idSubject" type="text" readonly class="form-control" id="idSubject" value="${subject.idSubject}">
-                                    </div>
+                                    <c:choose>
+                                        <c:when test="${empty subject.idSubject}">
+                                            <label for="idSubject" class="col-lg-3 col-form-label" style="display: none;">ID</label>
+                                            <div class="col-lg-9">
+                                                <input name="idSubject" type="hidden" readonly class="form-control" id="idSubject" value="-1" style="display: none;">
+                                            </div>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <label for="idSubject" class="col-lg-3 col-form-label">ID</label>
+                                            <div class="col-lg-9">
+                                                <input name="idSubject" type="text" readonly class="form-control" id="idSubject" value="${subject.idSubject}">
+                                            </div>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </div>
         
                                 <div class="form-group row">
