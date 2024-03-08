@@ -57,7 +57,9 @@
                 <div class="container-fluid">
                     
                     <div id="toolbar">
-                        <h2>Liste des matières <button class="btn btn-info mb-1 ml-1"> <i class="fas fa-plus-circle pr-2"></i> Ajouter une matière</button> </h2>
+                        <h2>Liste des matières
+                            <a href="addSubject.do" class="text-decoration-none"><button class="btn btn-info mb-1 ml-1"> <i class="fas fa-plus-circle pr-2"></i> Ajouter une matière</button></a> 
+                        </h2>
                     </div>
                     
                     <table
