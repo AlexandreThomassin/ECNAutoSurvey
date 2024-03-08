@@ -50,6 +50,7 @@ public class EmailController {
             return "successmail"; // Si ca marche -> Vue de succès
 
         } catch (MessagingException e) {
+            System.out.println(e);
             e.printStackTrace();
             return "failmail"; // Si ca échoue -> Vue d'échec
         }

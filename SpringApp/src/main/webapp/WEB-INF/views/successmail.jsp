@@ -35,7 +35,7 @@
     <div class="container">
         <h1>Email Sent Successfully!</h1>
         <p>Your email has been successfully sent.</p>
-        <img src="img/monke.jpg" class="icon">
+        <img src="img/2CV.jpg" class="icon">
     </div>
 </body>
 </html>

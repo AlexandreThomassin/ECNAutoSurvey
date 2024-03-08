@@ -28,7 +28,7 @@
     <div class="container">
         <h1>Email Not Sent</h1>
         <p>Oops! Something went wrong while sending the email.</p>
-        <img src="img/sadmonke.jpg">
+        <img src="img/monke.jpg">
     </div>
 </body>
 </html>
