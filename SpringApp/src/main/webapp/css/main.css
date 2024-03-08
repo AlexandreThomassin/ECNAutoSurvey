@@ -71,7 +71,7 @@ line-height: 1.6;
 -webkit-transition: 0.3s;
 -o-transition: 0.3s;
 transition: 0.3s;
-margin-bottom: 10px;
+margin-bottom: 0px;
 }
 @media (prefers-reduced-motion: reduce) {
     .select2-container--default .select2-selection--multiple {

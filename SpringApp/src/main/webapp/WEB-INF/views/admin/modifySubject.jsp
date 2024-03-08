@@ -6,9 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="scheme" value="${pageContext.request.scheme}"/>
-<c:set var="baseURL" value="${pageContext.request.localName}"/>
-<c:set var="serverPort" value="${pageContext.request.serverPort}"/>
 <!DOCTYPE html>
 <html>
     <head>

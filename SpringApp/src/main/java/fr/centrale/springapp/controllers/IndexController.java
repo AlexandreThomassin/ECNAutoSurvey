@@ -4,6 +4,10 @@
  */
 package fr.centrale.springapp.controllers;
 
+import fr.centrale.springapp.items.SubjectGroup;
+import fr.centrale.springapp.repositories.SubjectGroupRepository;
+import java.util.Collection;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,6 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class IndexController {
+    
+    @Autowired
+    private SubjectGroupRepository subjectGroupRepository;
     
     @RequestMapping(value="index.do")
     public ModelAndView handleIndexGet() {
@@ -32,7 +39,14 @@ public class IndexController {
     
     @RequestMapping(value="admin/dashboard.do")
     public ModelAndView handleDashboardGet() {
-        return new ModelAndView("admin/dashboard");
+        
+        ModelAndView returned = new ModelAndView("admin/dashboard");
+        
+        // Get list of subject groups to fill select
+        Collection<SubjectGroup> subjectGroups = subjectGroupRepository.findAll();
+
+        returned.addObject("subjectGroups", subjectGroups);
+        return returned;
     }
 
     @RequestMapping(value="test.do")

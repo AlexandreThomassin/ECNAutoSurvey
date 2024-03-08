@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +21,9 @@
         <link rel="stylesheet" href="/SpringApp/css/main.css">
         <!-- Mandatory to use the sidebar -->
         <link rel="stylesheet" href="/SpringApp/css/sidebar.css">
-        <link rel="stylesheet" href="/SpringApp/fontawesome/css/all.css">
+        <link rel="stylesheet" href="/SpringApp/fontawesome/css/all.min.css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
 
         <script src="/SpringApp/js/test.js"></script>
 
@@ -28,6 +31,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script type="text/javascript" src="/SpringApp/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 
         <link rel="shortcut icon" href="favicon.ico">
     </head>
@@ -161,6 +166,19 @@
                                             
                                             </div>
                                             <hr>
+                                            <div class="row">
+                                                <label for="subjectGroup" class="col-lg-4 col-form-label my-auto">Option(s) concernée(s)</label>
+                                                <div class="col-lg-8">
+                                                    <select name="subjectGroup" class="js-select2" class="custom-select mb-0" multiple>
+                                                        <c:forEach var="group" items="${subjectGroups}">
+                                                            <option value="${group.idGroup}" data-badge="">
+                                                                ${group.groupName}
+                                                            </option>
+                                                        </c:forEach>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <hr>
                                             <div class="form-group">
                                                 <label for="mailObject">Objet</label>
                                                 <input type="text" class="form-control" id="mailObject" placeholder="">
@@ -188,6 +206,7 @@
             </div>
         </div>
         
+        <script type="text/javascript" src="../js/multiple-select.js"></script>
 
     </body>
 
