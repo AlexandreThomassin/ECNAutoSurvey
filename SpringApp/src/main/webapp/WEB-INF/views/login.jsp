@@ -36,15 +36,15 @@
                             <div class="col-md-11 mx-4">
                                 <hr>
                                 <h5>Professeurs :</h5>
-                                <form>
+                                <form action="j_spring_security_check" method="post">
                                     <div class="form-group">
-                                      <label for="InputUser">Identifiant</label>
-                                      <input type="id" class="form-control" id="InputUser" aria-describedby="userHelp" placeholder="Identifiant">
-                                      <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+                                        <label for="InputUser">Identifiant</label>
+                                        <input type="text" name="username" class="form-control" id="InputUser" aria-describedby="userHelp" placeholder="Identifiant">
+                                        <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre identifiant avec qui que ce soit.</small>
                                     </div>
                                     <div class="form-group">
-                                      <label for="InputPassword">Mot de passe</label>
-                                      <input type="password" class="form-control" id="InputPassword" placeholder="Mot de passe">
+                                        <label for="InputPassword">Mot de passe</label>
+                                        <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Mot de passe">
                                     </div>
                                     <button type="submit" class="btn btn-primary w-100">Se connecter</button>
                                 </form>

@@ -1,0 +1,16 @@
+127.0.0.1 - - [16/Mar/2024:11:39:57 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [16/Mar/2024:11:39:57 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [16/Mar/2024:11:39:57 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [16/Mar/2024:11:39:57 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [16/Mar/2024:11:39:57 +0100] "GET /manager/text/ HTTP/1.1" 401 2562
+127.0.0.1 - admin [16/Mar/2024:11:39:58 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - - [16/Mar/2024:11:39:58 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - admin [16/Mar/2024:11:39:58 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - - [16/Mar/2024:11:39:58 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - admin [16/Mar/2024:11:39:58 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - - [16/Mar/2024:11:39:58 +0100] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - admin [16/Mar/2024:11:39:58 +0100] "GET /manager/text/ HTTP/1.1" 200 42
+127.0.0.1 - admin [16/Mar/2024:11:39:58 +0100] "GET /manager/text/list HTTP/1.1" 200 327
+127.0.0.1 - admin [16/Mar/2024:11:39:58 +0100] "GET /manager/text/list HTTP/1.1" 200 327
+127.0.0.1 - admin [16/Mar/2024:11:39:59 +0100] "GET /manager/text/undeploy?path=/SpringApp HTTP/1.1" 200 84
+127.0.0.1 - admin [16/Mar/2024:11:40:07 +0100] "GET /manager/text/deploy?config=file%3A%2FC%3A%2FUsers%2Ftankr%2FAppData%2FLocal%2FTemp%2Fcontext14924797242516824849.xml&path=/SpringApp HTTP/1.1" 200 125

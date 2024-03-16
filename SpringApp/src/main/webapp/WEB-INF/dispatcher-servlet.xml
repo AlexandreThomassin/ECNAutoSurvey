@@ -6,16 +6,44 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:security="http://www.springframework.org/schema/security"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
-       http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+       http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
     
     <mvc:annotation-driven/>
     <context:component-scan base-package="fr.centrale.springapp.controllers" />
+
+    <security:http auto-config="true" use-expressions="true">
+        <security:intercept-url pattern="/login" access="permitAll" />
+        <security:intercept-url pattern="/**" access="hasRole('USER')" />
+        <security:form-login login-page="/login" default-target-url="/homepage" authentication-failure-url="/failmail" />
+        <security:logout logout-success-url="/login" />
+    </security:http>
+    
+    <!-- Gestionnaire d'authentification -->
+    <security:authentication-manager>
+        <!-- Configuration LDAP -->
+        <security:ldap-authentication-provider
+            user-search-filter="(uid={0})"
+            user-search-base="ou=people,dc=ec-nantes,dc=fr"
+            group-search-filter="(member={0})"
+            group-search-base="ou=groups,dc=ec-nantes,dc=fr"
+            context-source-ref="contextSource" />
+    </security:authentication-manager>
+    
+    <!-- Configuration de la source de contexte LDAP -->
+    <bean id="contextSource" class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+        <constructor-arg value="ldaps://ldaps.nomade.ec-nantes.fr:636/dc=ec-nantes,dc=fr" />
+        <property name="userDn" value="uid=login,ou=people,dc=ec-nantes,dc=fr" />
+
+        <property name="password" value="motdepasse" />
+    </bean>
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -23,3 +51,4 @@
           p:suffix=".jsp" />
 
 </beans>
+
