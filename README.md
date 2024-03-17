@@ -42,21 +42,8 @@ Give the username and the password of an admin user :
 
 Validate to create server by clicking on “Finish”.
 
-#### Configure PostgreSQL for the project :
-You should already have PostgreSQL local server configured.
-
-Create a new user:  
-```
-On PgAdmin right click on your server, select "Create" > "Login/Group role" and set :
-- Name: pgrou
-- Password : admin
-- Privileges : at least "Can login?"  
-```
-
-Next, create a new Database, call it "SpringApp" and set the user "pgrou" to owner.  
-Open Query tool. Import "CreateDatabase.sql" and run it.
-
-<span style="color:red; font-weight:bold"> WARNING :</span> These names are mandatory to run the project, if you want to change them you'll have to modify all the Spring configuration files.
+#### Database of the project :
+The project is linked to a Database owned by ECN in France. If you want to launch the project, you'll have to be connected to ECN VPN (Usually using Forticlient), it is mandatory otherwise the project will not run.
 
 #### Run the project
 At this point you should be able to run the project on NetBeans.  
