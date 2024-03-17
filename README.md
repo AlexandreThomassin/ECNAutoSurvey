@@ -44,7 +44,7 @@ Validate to create server by clicking on “Finish”.
 
 #### Database of the project :
 The project is linked to a Database owned by ECN in France.  
-If you want to launch the project, you'll have to be connected to ECN VPN (Usually using Forticlient), <span style="color: red;">it is mandatory otherwise the project will not run </span>.
+If you want to launch the project, you'll have to be connected to ECN VPN (Usually using Forticlient), <span style="color:red; font-weight:bold"> It is mandatory otherwise the project will not run</span>.
 
 #### Run the project
 At this point you should be able to run the project on NetBeans.  
